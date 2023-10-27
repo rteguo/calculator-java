@@ -3,8 +3,34 @@ import java.io.*;
 /** Methods for performing arithmetic calculations. */
 class Arithmetic {
   public static float add(float num1, float num2) {
-    return 0f;
+    return num1 + num2;
   }
+
+  public static float sous(float num1, float num2) {
+    return num1 - num2;
+  }
+
+  public static float mult(float num1, float num2) {
+    return num1 * num2;
+  }
+
+  public static float div(float num1, float num2) {
+    return num1 / num2;
+  }
+
+  public static float mod(float num1, float num2) {
+    return num1 % num2;
+  }
+  
+  public static float square(float num1) {
+    return num1 * num1;
+  }
+  
+  public static float cube(float num1) {
+    return num1 * num1 * num1;
+  }
+  
+  
 }
 
 /** The calculator program. */
@@ -54,6 +80,34 @@ public class Calculator {
         case "+":
           result = Arithmetic.add(num1, num2);
           break;
+
+        case "-":
+          result = Arithmetic.sous(num1, num2);
+          break;
+        
+        case "*":
+          result = Arithmetic.mult(num1, num2);
+          break;
+
+        case "/":
+          result = Arithmetic.div(num1, num2);
+          break;
+
+        case "%":
+          result = Arithmetic.mod(num1, num2);
+          break;
+
+        case "square":
+          result = Arithmetic.square(num1);
+          break;
+
+        case "cube":
+          result = Arithmetic.cube(num1);
+          break;
+
+        case "q":
+          System.out.println("Quitting the program. Goodbye!");
+          return;
 
         default:
           result = null;
